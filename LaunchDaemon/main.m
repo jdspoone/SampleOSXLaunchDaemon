@@ -1,17 +1,20 @@
-//
-//  main.m
-//  LaunchDaemon
-//
-//  Created by Jeffrey Spooner on 2016-01-19.
-//  Copyright © 2016 Example. All rights reserved.
-//
+/*
+  
+  Written by Jeff Spooner
 
-#import <Foundation/Foundation.h>
+*/
 
-int main(int argc, const char * argv[]) {
-  @autoreleasepool {
-      // insert code here...
-      NSLog(@"Hello, World!");
-  }
+#import "Daemon.h"
+
+
+int main(int argc, const char *argv[])
+  {
+    // Create an instance of the daemon and start it
+    Daemon *daemon = [[Daemon alloc] init];
+    [daemon start];
+
+    // Loop indefinitely
+    [[NSRunLoop currentRunLoop] run];
+
     return 0;
-}
+  }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.example.daemon</string>
+	<key>KeepAlive</key>
+	<true/>
+	<key>WaitForDebugger</key>
+	<false/>
+	<key>MachServices</key>
+	<dict>
+		<key>com.example.daemon</key>
+		<true/>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Library/PrivilegedHelperTools/LaunchDaemon</string>
+	</array>
+</dict>
+</plist>

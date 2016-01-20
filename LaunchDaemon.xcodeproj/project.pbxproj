@@ -6,9 +6,50 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		1F8A80E11C4EDA4F00971E9D /* Install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 1F8A80E21C4EDA4F00971E9D /* Build configuration list for PBXAggregateTarget "Install" */;
+			buildPhases = (
+				1F8A80E71C4EDA6300971E9D /* ShellScript */,
+			);
+			dependencies = (
+				1F8A80E61C4EDA5D00971E9D /* PBXTargetDependency */,
+			);
+			name = Install;
+			productName = Install;
+		};
+		1F8A80EE1C4F083E00971E9D /* Uninstall */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 1F8A80EF1C4F083E00971E9D /* Build configuration list for PBXAggregateTarget "Uninstall" */;
+			buildPhases = (
+				1F8A80F21C4F084200971E9D /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Uninstall;
+			productName = Uninstall;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		1F8A80B91C4EB0AF00971E9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8A80B81C4EB0AF00971E9D /* main.m */; };
+		1F8A80C11C4EB0EB00971E9D /* Daemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8A80C01C4EB0EB00971E9D /* Daemon.m */; };
+		1F8A80CC1C4EB54300971E9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8A80CB1C4EB54300971E9D /* AppDelegate.m */; };
+		1F8A80CF1C4EB54300971E9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8A80CE1C4EB54300971E9D /* main.m */; };
+		1F8A80D11C4EB54300971E9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F8A80D01C4EB54300971E9D /* Assets.xcassets */; };
+		1F8A80D41C4EB54300971E9D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F8A80D21C4EB54300971E9D /* MainMenu.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F8A80E51C4EDA5D00971E9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F8A80AD1C4EB0AF00971E9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F8A80B41C4EB0AF00971E9D;
+			remoteInfo = LaunchDaemon;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1F8A80B31C4EB0AF00971E9D /* CopyFiles */ = {
@@ -25,10 +66,32 @@
 /* Begin PBXFileReference section */
 		1F8A80B51C4EB0AF00971E9D /* LaunchDaemon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LaunchDaemon; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F8A80B81C4EB0AF00971E9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1F8A80BF1C4EB0EB00971E9D /* Daemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Daemon.h; sourceTree = "<group>"; };
+		1F8A80C01C4EB0EB00971E9D /* Daemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Daemon.m; sourceTree = "<group>"; };
+		1F8A80C21C4EB27900971E9D /* Protocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Protocols.h; sourceTree = "<group>"; };
+		1F8A80C31C4EB3BE00971E9D /* daemon-Launchd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "daemon-Launchd.plist"; sourceTree = "<group>"; };
+		1F8A80C81C4EB54300971E9D /* Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Client.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F8A80CA1C4EB54300971E9D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1F8A80CB1C4EB54300971E9D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1F8A80CE1C4EB54300971E9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1F8A80D01C4EB54300971E9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F8A80D31C4EB54300971E9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1F8A80D51C4EB54300971E9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F8A80EB1C4F004E00971E9D /* License */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License; sourceTree = SOURCE_ROOT; };
+		1F8A80EC1C4F005E00971E9D /* ReadMe */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe; sourceTree = SOURCE_ROOT; };
+		1F8A80ED1C4F022D00971E9D /* install.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = install.sh; path = Scripts/install.sh; sourceTree = SOURCE_ROOT; };
+		1F8A80F31C4F087200971E9D /* uninstall.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = uninstall.sh; path = Scripts/uninstall.sh; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1F8A80B21C4EB0AF00971E9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F8A80C51C4EB54300971E9D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,7 +104,10 @@
 		1F8A80AC1C4EB0AF00971E9D = {
 			isa = PBXGroup;
 			children = (
+				1F8A80D91C4EC8A900971E9D /* Documentation */,
 				1F8A80B71C4EB0AF00971E9D /* LaunchDaemon */,
+				1F8A80C91C4EB54300971E9D /* Client */,
+				1F8A80E81C4EDEA700971E9D /* Scripts */,
 				1F8A80B61C4EB0AF00971E9D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				1F8A80B51C4EB0AF00971E9D /* LaunchDaemon */,
+				1F8A80C81C4EB54300971E9D /* Client.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,7 +125,52 @@
 			isa = PBXGroup;
 			children = (
 				1F8A80B81C4EB0AF00971E9D /* main.m */,
+				1F8A80C31C4EB3BE00971E9D /* daemon-Launchd.plist */,
+				1F8A80BF1C4EB0EB00971E9D /* Daemon.h */,
+				1F8A80C01C4EB0EB00971E9D /* Daemon.m */,
+				1F8A80C21C4EB27900971E9D /* Protocols.h */,
 			);
+			path = LaunchDaemon;
+			sourceTree = "<group>";
+		};
+		1F8A80C91C4EB54300971E9D /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				1F8A80CA1C4EB54300971E9D /* AppDelegate.h */,
+				1F8A80CB1C4EB54300971E9D /* AppDelegate.m */,
+				1F8A80D01C4EB54300971E9D /* Assets.xcassets */,
+				1F8A80D21C4EB54300971E9D /* MainMenu.xib */,
+				1F8A80D51C4EB54300971E9D /* Info.plist */,
+				1F8A80CD1C4EB54300971E9D /* Supporting Files */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		1F8A80CD1C4EB54300971E9D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F8A80CE1C4EB54300971E9D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1F8A80D91C4EC8A900971E9D /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				1F8A80EB1C4F004E00971E9D /* License */,
+				1F8A80EC1C4F005E00971E9D /* ReadMe */,
+			);
+			name = Documentation;
+			path = LaunchDaemon;
+			sourceTree = "<group>";
+		};
+		1F8A80E81C4EDEA700971E9D /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				1F8A80ED1C4F022D00971E9D /* install.sh */,
+				1F8A80F31C4F087200971E9D /* uninstall.sh */,
+			);
+			name = Scripts;
 			path = LaunchDaemon;
 			sourceTree = "<group>";
 		};
@@ -82,6 +194,23 @@
 			productReference = 1F8A80B51C4EB0AF00971E9D /* LaunchDaemon */;
 			productType = "com.apple.product-type.tool";
 		};
+		1F8A80C71C4EB54300971E9D /* Client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F8A80D61C4EB54300971E9D /* Build configuration list for PBXNativeTarget "Client" */;
+			buildPhases = (
+				1F8A80C41C4EB54300971E9D /* Sources */,
+				1F8A80C51C4EB54300971E9D /* Frameworks */,
+				1F8A80C61C4EB54300971E9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Client;
+			productName = Client;
+			productReference = 1F8A80C81C4EB54300971E9D /* Client.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -94,6 +223,15 @@
 					1F8A80B41C4EB0AF00971E9D = {
 						CreatedOnToolsVersion = 7.2;
 					};
+					1F8A80C71C4EB54300971E9D = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					1F8A80E11C4EDA4F00971E9D = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					1F8A80EE1C4F083E00971E9D = {
+						CreatedOnToolsVersion = 7.2;
+					};
 				};
 			};
 			buildConfigurationList = 1F8A80B01C4EB0AF00971E9D /* Build configuration list for PBXProject "LaunchDaemon" */;
@@ -102,6 +240,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 1F8A80AC1C4EB0AF00971E9D;
 			productRefGroup = 1F8A80B61C4EB0AF00971E9D /* Products */;
@@ -109,9 +248,53 @@
 			projectRoot = "";
 			targets = (
 				1F8A80B41C4EB0AF00971E9D /* LaunchDaemon */,
+				1F8A80C71C4EB54300971E9D /* Client */,
+				1F8A80E11C4EDA4F00971E9D /* Install */,
+				1F8A80EE1C4F083E00971E9D /* Uninstall */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F8A80C61C4EB54300971E9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F8A80D11C4EB54300971E9D /* Assets.xcassets in Resources */,
+				1F8A80D41C4EB54300971E9D /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F8A80E71C4EDA6300971E9D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sudo -A ${PROJECT_DIR}/Scripts/install.sh ${PROJECT_DIR} ${BUILT_PRODUCTS_DIR}";
+		};
+		1F8A80F21C4F084200971E9D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sudo -A ${PROJECT_DIR}/Scripts/uninstall.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F8A80B11C4EB0AF00971E9D /* Sources */ = {
@@ -119,10 +302,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F8A80B91C4EB0AF00971E9D /* main.m in Sources */,
+				1F8A80C11C4EB0EB00971E9D /* Daemon.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F8A80C41C4EB54300971E9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F8A80CF1C4EB54300971E9D /* main.m in Sources */,
+				1F8A80CC1C4EB54300971E9D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1F8A80E61C4EDA5D00971E9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F8A80B41C4EB0AF00971E9D /* LaunchDaemon */;
+			targetProxy = 1F8A80E51C4EDA5D00971E9D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1F8A80D21C4EB54300971E9D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F8A80D31C4EB54300971E9D /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1F8A80BA1C4EB0AF00971E9D /* Debug */ = {
@@ -218,6 +430,58 @@
 			};
 			name = Release;
 		};
+		1F8A80D71C4EB54300971E9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Client/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Client;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1F8A80D81C4EB54300971E9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Client/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Client;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1F8A80E31C4EDA4F00971E9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1F8A80E41C4EDA4F00971E9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1F8A80F01C4F083E00971E9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1F8A80F11C4F083E00971E9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -235,6 +499,30 @@
 			buildConfigurations = (
 				1F8A80BD1C4EB0AF00971E9D /* Debug */,
 				1F8A80BE1C4EB0AF00971E9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1F8A80D61C4EB54300971E9D /* Build configuration list for PBXNativeTarget "Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F8A80D71C4EB54300971E9D /* Debug */,
+				1F8A80D81C4EB54300971E9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1F8A80E21C4EDA4F00971E9D /* Build configuration list for PBXAggregateTarget "Install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F8A80E31C4EDA4F00971E9D /* Debug */,
+				1F8A80E41C4EDA4F00971E9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1F8A80EF1C4F083E00971E9D /* Build configuration list for PBXAggregateTarget "Uninstall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F8A80F01C4F083E00971E9D /* Debug */,
+				1F8A80F11C4F083E00971E9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

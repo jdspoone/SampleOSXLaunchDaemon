@@ -1,0 +1,33 @@
+Sample XPC Launch Daemon ReadMe
+
+This Xcode project demonstrates a basic launch daemon which:
+  -maintains an XPC listener to handle incoming connections from it's client(s)
+  -signals it's clients via Darwin notifications
+
+The project includes:
+  -a Daemon intended to be run via launchd. It maintains a count, and responds to XPC requests for its count and to increment its count. Upon incrementing its count, it notifies all interested parties via Darwin notifications.
+  -a Client, from which you can ask the Daemon for it's current count, and ask it to increment it's count.
+  -an install script, which copies the daemon's executable to /Library/PrivilegedHelperTools/, the Daemon's launchd.plist to /Library/LaunchDaemons/, and then loads the daemon via launchctl
+  -an uninstall script, which unloads the daemon via launchctl, and removes the daemon's executable and launchd.plist
+
+To run the project:
+  -run the Install scheme
+  -run the Client scheme
+    -click the button and witness XPC communication and Darwin notifications in action!
+  -run the Uninstall scheme
+
+NOTE: You will need to set SUDO_ASKPASS to run the installation and uninstallation targets.
+
+The daemon needs to be launched via launchd if you want the XPC stuff to actually work.
+However, if you're writing a more complicated daemon, you will probably want to be able to debug the daemon with Xcode.
+To do this, you'll need to do the follwing:
+  -modify daemon-Launchd.plist so the WaitForDebugger flag is set to YES
+  -ensure the Daemon's Xcode scheme:
+    -runs as Root
+    -waits for the executable to be launched
+  -modify install.sh so it does NOT load the daemon
+  -run the Install scheme
+  -run the Daemon scheme, and then load the daemon via launchctl
+    -you've got to do it in this order, or the Xcode debugger will never attach
+
+Remember to set the WaitForDebugger flag to NO again before releasing anything!
